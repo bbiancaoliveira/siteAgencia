@@ -35,12 +35,12 @@
                 </div>
 
                 <div class="card-tag card-tag-bottom">
-                    <p>R$1500,00</p>
+                    <p>R$3.500,00</p>
                 </div>
 
                 <img class="card-img" src="https://images.unsplash.com/photo-1514214246283-d427a95c5d2f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=673&q=80" alt="miami">
                 <div class="card-content">
-                <h1>Pacote 5 noites - Hotel Premium</h1>
+                <h1>Pacote 5 dias - Miami</h1>
                 <ul>
                     <li> <i data-feather="coffee"></i>Café da manhã</li>
                     <li> <i data-feather="wifi"></i>Wifi</li>
@@ -54,12 +54,12 @@
                 </div>
 
                 <div class="card-tag card-tag-bottom">
-                    <p>R$1500,00</p>
+                    <p>R$5.500,00</p>
                 </div>
 
-                <img class="card-img" src="https://images.unsplash.com/photo-1514214246283-d427a95c5d2f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=673&q=80" alt="miami">
+                <img class="card-img" src="https://images.unsplash.com/photo-1586023546861-cd6c3332607c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTV8fGluZGlhfGVufDB8MHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="miami">
                 <div class="card-content">
-                <h1>Pacote 5 noites - Hotel Premium</h1>
+                <h1>Pacote 6 dias - Índia</h1>
                 <ul>
                     <li> <i data-feather="coffee"></i>Café da manhã</li>
                     <li> <i data-feather="wifi"></i>Wifi</li>
@@ -73,12 +73,12 @@
                 </div>
 
                 <div class="card-tag card-tag-bottom">
-                    <p>R$1500,00</p>
+                    <p>R$3.100,00</p>
                 </div>
 
-                <img class="card-img" src="https://images.unsplash.com/photo-1514214246283-d427a95c5d2f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=673&q=80" alt="miami">
+                <img class="card-img" src="https://images.unsplash.com/photo-1566942482387-e8dc927e5829?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8bWFyYWdvZ2l8ZW58MHwwfDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="miami">
                 <div class="card-content">
-                <h1>Pacote 5 noites - Hotel Premium</h1>
+                <h1>Pacote 5 dias - Maragogi</h1>
                 <ul>
                     <li> <i data-feather="coffee"></i>Café da manhã</li>
                     <li> <i data-feather="wifi"></i>Wifi</li>
@@ -86,12 +86,72 @@
                 </ul>          
                 </div>                        
             </div> 
-        </div>      
-
+        </div>
     </section>
+
+    <section class="servicos">        
+        <h1 class="servicos-title">Serviços</h1>
+        <div class="servicos-container">
+            <div class="servicos-card">
+                <i data-feather="map"></i>
+                <div class="servico-descricao">
+                    <h3>Trour guiado</h3>
+                    <p>Os tours guiados são passeios que são realizados com auxílio de um guia, que além de dar informaçoes sobre o local vai nos conduzir ao longo do trajeto.</p>
+                </div>    
+                <button>Saiba mais</button>
+            </div>
+            <div class="servicos-card">
+                <i data-feather="camera"></i>
+                <div class="servico-descricao">
+                    <h3>Fotografia profissional</h3>
+                    <p>Nossos fotógrafos estão acostumados a registrar os melhores momentos das viagens para que você aproveite a paisagem sem se preocupar.</p>
+                </div> 
+                <button>Saiba mais</button>
+            </div>
+            <div class="servicos-card">
+                <i data-feather="navigation"></i>
+                <div class="servico-descricao">
+                    <h3>Aluguel de veículos</h3>
+                    <p>Para os clientes que preferem explorar o ambiente sozinhos e curtem a liberdade, oferecemos o serviço de aluguel de veículos com preço super em conta.</p>           
+                </div>
+                <button>Saiba mais</button>
+            </div>
+        </div>  
+    </section>
+
+    <section class="contato">
+        <div class="contato-card">
+            <h1>Entre em contato</h1>
+            <ul>
+                <li><i data-feather="send"></i>Rua José Alexo, 100</li>
+                <li><i data-feather="mail"></i>contato@contato.com</li>
+                <li><i data-feather="phone"></i>(55) 99999-9999</li>
+            </ul>
+        </div>    
+        <div id="map"></div>
+        
+    </section>
+
+
     <script>
         feather.replace()
+
+        function initMap() {
+        // The location of Uluru
+        const uluru = { lat: -25.344, lng: 131.036 };
+        // The map, centered at Uluru
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 4,
+          center: uluru,
+        });
+        // The marker, positioned at Uluru
+        const marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+        });
+      }     
     </script>    
+    <script defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
 </body>
 
 
